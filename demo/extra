@@ -1,0 +1,88 @@
+<tr>
+                  <td><label for="language">Language</label></td>
+                  <td>
+                    <select name="language" id="language">
+                      <option value="">Select language</option>
+                      <option value="English">English</option>
+                      <option value="Spanish">Spanish</option>
+                      <option value="Hindi">Hindi</option>
+                      <option value="Arabic">Arabic</option>
+                      <option value="Russian">Russian</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td><label for="about">About:</label></td>
+                  <td><textarea name="about" id="about" placeholder="Write about yourself..."></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" name="password" id="password"></td>
+                  </tr>
+                  <?php
+                  session_start();
+                  echo  "<p>Welcome user,{$_SESSION['name']}<p>";
+                  echo "<br><a href='one.html'>logout</a>";
+                  ?>
+<html>
+<h2>then go back to the login page </h2>
+<form method="post" action="flayout.php">
+<input type="submit" class="submit" value="Go back to login" name="submit" style="height:40px; width:400px" />
+</table>
+</form>
+</html>
+image friends
+<?php
+$id=$_POST["u"];
+$md=$_POST["e"];
+$g=$_POST["g"];
+$re=$_POST["rele"];
+$do=$_POST["d"];
+$la=$_POST["l"];
+$add=$_POST["add"];
+?>
+<html>
+    <body>
+    <h1 align:center>THE DATA WHICH IS ENTERED IS:</h1>
+<table align:center>
+    <tr>
+        <th>USERNAME:</th>
+        <td><?php echo $id?></td>
+    </tr>
+    <tr>
+        <th>EMAIL ID:</th>
+        <td><?php echo $md?></td>
+    </tr>
+    <tr>
+        <th>GENDER:</th>
+        <td><?php if($g == "1"){
+            echo("male");}
+        else{
+            echo("female");}?></td>
+    </tr>
+    <tr>
+        <th>RELIGION:</th>
+        <td><?php echo $re?></td>
+    </tr>
+    <tr>
+        <th>DOB:</th>
+        <td><?php echo $do?></td>
+    </tr>
+    <tr>
+        <th>LANGUAGES:</th>
+        <td><?php echo $la
+            ?></td>
+    </tr>
+    <tr>
+        <th>ADDRESS:</th>
+        <td><?php echo $add?></td>
+    </tr>
+    <tr>
+        <td><button type="button">CONTINUE</td>
+    </tr>
+
+
+
+</table>
+    </body>
+</html>
